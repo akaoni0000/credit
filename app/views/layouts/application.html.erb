@@ -4,6 +4,8 @@
     <title>Credit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= Gon::Base.render_data %>
     <script src='https://js.pay.jp/' type='text/javascript'></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

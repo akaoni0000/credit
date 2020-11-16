@@ -1,14 +1,16 @@
-<h1> 登録クレジットカード情報 </h1>
-<br>
- <h2>"**** **** ****"<%=@default_card_information.last4%></h2>
-<br>
-<% exp_month = @default_card_information.exp_month.to_s %>  <!--to_sにしないと7行目で文字列と合体できない-->
-<% exp_year = @default_card_information.exp_year.to_s.slice(2,3) %>
-<%= exp_month + " / " + exp_year %>
-<%= form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do %>
-  <%= hidden_field_tag :card_id, "" %>
-  <%= button_tag "削除する" %>
-<%end%>
-<%= form_tag(purchase_path, method: :post, id: 'charge-form',  name: "inputForm") do %>
-  <%= button_tag "購入する" %>
-<%end%>
+<div style="text-align: center;">
+  <h1> 登録クレジットカード情報 </h1>
+  <br>
+  <h2>"**** **** ****"<%=@default_card_information.last4%></h2>
+  <br>
+  <% exp_month = @default_card_information.exp_month.to_s %>  <!--to_sにしないと7行目で文字列と合体できない-->
+  <% exp_year = @default_card_information.exp_year.to_s.slice(2,3) %>
+  <%= exp_month + " / " + exp_year %>
+  <%= form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do %>
+    <%= hidden_field_tag :card_id, "" %>
+    <%= button_tag "削除する" %>
+  <%end%>
+  <%= form_tag(purchase_path, method: :post, id: 'charge-form',  name: "inputForm") do %>
+    <%= button_tag "購入する" %>
+  <%end%>
+</div>
