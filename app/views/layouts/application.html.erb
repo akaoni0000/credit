@@ -6,12 +6,21 @@
     <%= csp_meta_tag %>
 
     <%= Gon::Base.render_data %>
-    <script src='https://js.pay.jp/' type='text/javascript'></script>
+    <script src="https://js.pay.jp/v2/pay.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
+
+
+    <script src="https://js.pay.jp/v2/pay.js"></script>
+<style>
+/* 必要に応じてフォームの外側のデザインを用意します */
+div.payjs-outer {
+  border: thin solid #198fcc;
+}
+</style>
   </body>
 </html>

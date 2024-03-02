@@ -55,3 +55,6 @@ payjpオリジナルのモーダル<br>
 あとはcard_controllerとpayjp.jsのファイルを見ればわかる<br>
 
 
+## 追記
+payjpがアップデートしたみたいなのでhttps://pay.jp/docs/payjs-guidanceを読む<br>
+Payjp.setPublicKey(gon.key);が使えなくなっていた
